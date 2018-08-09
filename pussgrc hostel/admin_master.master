@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin_master.master.cs" Inherits="admin_master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>pussgrc hostel</title>
+    <link href="logo1.jpg" rel="shortcut icon" >
+      <style>
+         #div1
+        {
+          width:100%;
+          height:104px;
+          background:#44143d;
+          margin-top:15px auto;
+        }
+     #div2{
+         width:100%;
+         height:35px;
+     }
+    ul{
+        background-color:#cc0066;
+    }
+    ul li{
+      
+        width:160px;
+        display:inline-block;
+        height:35px;
+        line-height:35px;
+        text-align:center;
+    }
+   ul li a{
+       color:black;
+       text-decoration:none;
+       display:block;
+    }
+   ul li a:hover{
+       background-color:#44143d;
+       color:white;
+   }
+   #div3 img
+    {
+     width:300px ;
+     border:1px solid grey;
+     padding:10px;
+     background-color:#eee;
+     box-shadow:2px 2px 5px grey;
+     height:300px;
+    }
+    #div3
+   {
+       width:310px;
+       height:310px;
+   }
+   </style>
+     <script src="vikash_jquery.js" type="text/javascript"></script>
+    <script src="jquery.cycle.all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            $('#div3').cycle({
+                fx: 'shuffle',
+                speed: 300,
+                timeout: 2000
+            });
+        }
+        );
+
+    </script>
+   
+</head>
+<body background="image/back.PNG" ><form id ="hhh" runat="server">
+<div id="div1">
+<%--<img style="float:left; height: 104px; width: 13%;" src="image/logo1.jpg" alt="logo" />--%>
+<h1 style="float:left; margin-left:35%; font-style: inherit; font-family: Playbill; font-size: 40px; font-weight: normal; color: #FFFFFF; font-variant: normal; text-transform: none; width: 397px; height: 51px;" aria-orientation="vertical">PUSSGRC BOYS HOSTEL MANAGEMENT</h1>
+ </div>
+ <div id="div2">
+        <ul>
+            <li><a href="admin_welcome.aspx">HOME</a></li>
+            <li><a href="fee_submittion_admin.aspx">FEE SUBMITTION</a></li>
+            <li><a href="upload_notice.aspx">UPLOAD NOTICE</a></li>
+            <li><a href="repor_admin.aspx">REPORT</a></li>
+            <li><a href="see_complain.aspx">SEE COMPLAIN</a></li>
+            <li><asp:LinkButton ID="lnkLog" runat="server" Text="LOGOUT" CausesValidation="false" onclick="lnkLog_Click"></asp:LinkButton></li>
+        </ul>
+    </div><br />
+  <table width="1050px">
+  <tr>
+  <td align="left" class="auto-style1"> <div id="div3">
+ <img src ="image/1.jpg" width="300" height="300" /> 
+    <img src ="image/2.jpg"width="300" height="300" />
+    <img src ="image/3.jpg" width="300" height="300" /> 
+    <img src ="image/4.jpg" width="300" height="300"/> 
+   <%-- <img src ="image/vikas.jpg" width="300" height="300" /> --%>
+
+  </div>
+  </td>
+  <td align="center">
+ <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+  </td>
+   </tr>
+   </table></form></body></html>
